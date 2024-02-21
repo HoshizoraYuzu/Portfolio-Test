@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
   }
   
   .container {
@@ -24,10 +24,10 @@ body {
     font-size: 2rem;
   }
   
-  #section1 { background-color: #007bff; }
-  #section2 { background-color: #6c757d; }
-  #section3 { background-color: #28a745; }
-  #section4 { background-color: #ffc107; }
+  #section1 { background-color: #D90368; } /* Pink */
+  #section2 { background-color: #00CCFF; } /* Cyan */
+  #section3 { background-color: #FFEA00; } /* Yellow */
+  #section4 { background-color: #000000; } /* Black */
   
   .navbar {
     position: fixed;
@@ -47,13 +47,15 @@ body {
     text-decoration: none;
     padding: 10px;
     cursor: pointer;
+    font-weight: bold;
   }
   
-  /* Additional styles for enhanced appearance */
+  /* Additional styles for Bauhaus style */
   
   .section h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    font-weight: bold;
   }
   
   .section p {
@@ -64,4 +66,5 @@ body {
   .navbar a:hover {
     background-color: #555;
   }
+  
   
