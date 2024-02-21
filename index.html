@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horizontal Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 400%; /* Four sections */
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease;
+  }
+
+  .section {
+    width: 25%; /* Each section occupies 25% of the viewport width */
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  #section1 { background-color: #007bff; }
+  #section2 { background-color: #6c757d; }
+  #section3 { background-color: #28a745; }
+  #section4 { background-color: #ffc107; }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1000;
+  }
+
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a onclick="scrollToPage(0)">Home</a>
+  <a onclick="scrollToPage(1)">About</a>
+  <a onclick="scrollToPage(2)">Portfolio</a>
+  <a onclick="scrollToPage(3)">Contact</a>
+</div>
+
+<div class="container">
+  <div id="section1" class="section">Home</div>
+  <div id="section2" class="section">About</div>
+  <div id="section3" class="section">Portfolio</div>
+  <div id="section4" class="section">Contact</div>
+</div>
+
+<script>
+  window.addEventListener('wheel', handleScroll);
+
+  function handleScroll(event) {
+    const delta = Math.sign(event.deltaY);
+    const container = document.querySelector('.container');
+    const sectionWidth = container.clientWidth / 4; // Assuming 4 sections
+    let currentIndex = Math.floor(-container.getBoundingClientRect().left / sectionWidth);
+
+    if (delta > 0) {
+      scrollToPage(currentIndex + 1);
+    } else {
+      scrollToPage(currentIndex - 1);
+    }
+  }
+
+  function scrollToPage(pageIndex) {
+    const container = document.querySelector('.container');
+    const sectionWidth = container.clientWidth / 4; // Assuming 4 sections
+    container.style.transform = `translateX(-${pageIndex * sectionWidth}px)`;
+  }
+</script>
+
+</body>
+</html>
