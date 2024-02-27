@@ -9,9 +9,9 @@
 <body>
 
 <div class="navbar">
-  <button id="navToggle">Menu</button> <!-- Toggle Button -->
   <img src="YHlogo.png" alt="Logo" style="height: 50px;"> <!-- Adjust the src and height as needed -->
-  <div id="navLinks"> <!-- Add this div to wrap navigation links -->
+  <button id="navToggle">Menu</button> <!-- Toggle Button -->
+  <div id="navLinks" class="hidden"> <!-- Wrapped links -->
     <a onclick="scrollToPage(0)">Books</a>
     <a onclick="scrollToPage(1)">Packages</a>
     <a onclick="scrollToPage(2)">Posters</a>
@@ -41,29 +41,7 @@
   </div>
 </div>
 
-<script>
-  window.addEventListener('wheel', handleScroll);
-
-  function handleScroll(event) {
-    const delta = Math.sign(event.deltaY);
-    const container = document.querySelector('.container');
-    const sectionWidth = container.clientWidth / 4; // Assuming 4 sections
-    let currentIndex = Math.floor(-container.getBoundingClientRect().left / sectionWidth);
-
-    if (delta > 0) {
-      scrollToPage(currentIndex + 1);
-    } else {
-      scrollToPage(currentIndex - 1);
-    }
-  }
-
-  function scrollToPage(pageIndex) {
-    const container = document.querySelector('.container');
-    const sectionWidth = container.clientWidth / 4; // Assuming 4 sections
-    container.style.transform = `translateX(-${pageIndex * sectionWidth}px)`;
-  }
-</script>
-<script src="script.js"></script> <!-- Correct placement for the external JS file -->
+<script src="script.js"></script> <!-- External JavaScript file -->
 
 </body>
 </html>

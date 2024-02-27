@@ -1,11 +1,11 @@
 document.getElementById('navToggle').addEventListener('click', function() {
     var navLinks = document.getElementById('navLinks');
-    if (navLinks.style.display === "block") {
-      navLinks.style.display = "none";
+    if (navLinks.classList.contains('hidden')) {
+      navLinks.classList.remove('hidden');
     } else {
-      navLinks.style.display = "block";
+      navLinks.classList.add('hidden');
     }
   });
   
-  // Include any additional JavaScript code here
+  // Include any additional JavaScript code here for scrolling behavior, etc.
   

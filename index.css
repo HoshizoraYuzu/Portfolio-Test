@@ -2,11 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f0f0f0; /* Light gray background */
+  background-color: #f0f0f0;
 }
 
 .container {
-  width: 400%; /* Four sections */
+  width: 400%;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -14,7 +14,7 @@ body {
 }
 
 .section {
-  width: 25%; /* Each section occupies 25% of the viewport width */
+  width: 25%;
   height: 100%;
   text-align: center;
   display: flex;
@@ -24,39 +24,39 @@ body {
   font-size: 2rem;
 }
 
-#section1 { background-color: #D90368; } /* Pink */
-#section2 { background-color: #00CCFF; } /* Cyan */
-#section3 { background-color: #FFEA00; } /* Yellow */
-#section4 { background-color: #000000; } /* Black */
+#section1 { background-color: #D90368; }
+#section2 { background-color: #00CCFF; }
+#section3 { background-color: #FFEA00; }
+#section4 { background-color: #000000; }
 
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Full width */
+  height: 100%;
   background-color: #333;
   padding: 20px;
   display: flex;
-  justify-content: space-between; /* Adjusted for horizontal layout */
-  align-items: center; /* Center items vertically */
+  flex-direction: column;
+  justify-content: space-around;
   z-index: 1000;
 }
 
-.navbar a, #navToggle {
+.navbar img, .navbar button, .navbar div a {
+  margin: 10px 0;
+}
+
+.navbar a, .navbar button {
   color: #fff;
   text-decoration: none;
   padding: 10px;
   cursor: pointer;
   font-weight: bold;
+  display: block; /* Ensure links and button are block level for vertical layout */
 }
 
-#navLinks {
-  display: none; /* Hide links initially */
+.hidden {
+  display: none;
 }
 
-#navLinks a:hover, #navToggle:hover {
-  background-color: #555;
-}
-
-/* No changes needed for the grid layout styles provided previously */
-
+/* Additional styles for Bauhaus style, grid, etc., go here */
