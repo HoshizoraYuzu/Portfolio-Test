@@ -1,3 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.container {
+  width: 400%; /* Four sections */
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease;
+}
+
+.section {
+  width: 25%; /* Each section occupies 25% of the viewport width */
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
+#section1 { background-color: #D90368; } /* Pink */
+#section2 { background-color: #00CCFF; } /* Cyan */
+#section3 { background-color: #FFEA00; } /* Yellow */
+#section4 { background-color: #000000; } /* Black */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Additional styles for Bauhaus style */
+
+.section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.section p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+.nav-links {
+  display: none; /* Hide links initially */
+}
+
+/* Style for the toggle button (optional) */
+#navToggle {
+  cursor: pointer;
+  /* Add more styles as needed */
+}
+
+
+/* Grid layout styles */
 .section .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust number of columns based on container size */
@@ -10,74 +91,3 @@
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Cover the container without stretching */
 }
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0; /* Light gray background */
-  }
-  
-  .container {
-    width: 400%; /* Four sections */
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    transition: transform 0.5s ease;
-  }
-  
-  .section {
-    width: 25%; /* Each section occupies 25% of the viewport width */
-    height: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 2rem;
-  }
-  
-  #section1 { background-color: #D90368; } /* Pink */
-  #section2 { background-color: #00CCFF; } /* Cyan */
-  #section3 { background-color: #FFEA00; } /* Yellow */
-  #section4 { background-color: #000000; } /* Black */
-  
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: #333;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    z-index: 1000;
-  }
-  
-  .navbar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  /* Additional styles for Bauhaus style */
-  
-  .section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-  
-  .section p {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-  }
-  
-  .navbar a:hover {
-    background-color: #555;
-  }
-  
-  
