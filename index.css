@@ -1,62 +1,49 @@
-body {
-  margin: 0;
+body, html {
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f0f0f0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
-.container {
-  width: 400%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  transition: transform 0.5s ease;
-}
-
-.section {
-  width: 25%;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 2rem;
-}
-
-#section1 { background-color: #D90368; }
-#section2 { background-color: #00CCFF; }
-#section3 { background-color: #FFEA00; }
-#section4 { background-color: #000000; }
-
-.navbar {
+#navbar {
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
+  width: 50px; /* Width of closed navbar */
   height: 100%;
-  background-color: #333;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  background-color: black;
+  color: white;
   z-index: 1000;
+  transition: width 0.5s;
 }
 
-.navbar img, .navbar button, .navbar div a {
-  margin: 10px 0;
-}
-
-.navbar a, .navbar button {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
+#nav-toggle {
+  padding: 20px;
   cursor: pointer;
-  font-weight: bold;
-  display: block; /* Ensure links and button are block level for vertical layout */
 }
 
-.hidden {
+#nav-content {
   display: none;
+  padding: 20px;
 }
 
-/* Additional styles for Bauhaus style, grid, etc., go here */
+.nav-open #nav-content {
+  display: block;
+}
+
+.nav-open #navbar {
+  width: 250px; /* Width of open navbar */
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+section {
+  min-width: 100vw; /* Viewport width */
+  padding: 40px;
+}
+
+/* Add more styles for your sections and content here */

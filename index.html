@@ -3,45 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horizontal Portfolio</title>
-<link rel="stylesheet" href="index.css"> <!-- Linking your CSS file -->
+<title>Horizontal Scroll Website</title>
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<div class="navbar">
-  <img src="YHlogo.png" alt="Logo" style="height: 50px;"> <!-- Adjust the src and height as needed -->
-  <button id="navToggle">Menu</button> <!-- Toggle Button -->
-  <div id="navLinks" class="hidden"> <!-- Wrapped links -->
-    <a onclick="scrollToPage(0)">Books</a>
-    <a onclick="scrollToPage(1)">Packages</a>
-    <a onclick="scrollToPage(2)">Posters</a>
-    <a onclick="scrollToPage(3)">Branding</a>
+<div id="navbar" class="nav-closed">
+  <div id="nav-toggle" onclick="toggleNav()">&#9776;</div>
+  <div id="nav-content">
+    <a href="#section1">Posters</a>
+    <a href="#section2">Books</a>
+    <a href="#section3">Branding</a>
+    <a href="#section4">Package</a>
+    <a href="#section5">Misc</a>
   </div>
 </div>
 
-<div class="container">
-  <div id="section1" class="section">
-    <img src="https://via.placeholder.com/300x300" alt="Placeholder Image">
-    <img src="https://via.placeholder.com/300x300" alt="Placeholder Image">
-  </div>
-  <div id="section2" class="section">
-    <h1>About</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut est auctor, ultrices nunc ac, aliquet velit. Nulla facilisi. Proin euismod mauris vitae efficitur viverra.</p>
-    <img src="https://via.placeholder.com/300x300" alt="Placeholder Image">
-  </div>
-  <div id="section3" class="section">
-    <h1>Portfolio</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut est auctor, ultrices nunc ac, aliquet velit. Nulla facilisi. Proin euismod mauris vitae efficitur viverra.</p>
-    <img src="https://via.placeholder.com/300x300" alt="Placeholder Image">
-  </div>
-  <div id="section4" class="section">
-    <h1>Contact</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut est auctor, ultrices nunc ac, aliquet velit. Nulla facilisi. Proin euismod mauris vitae efficitur viverra.</p>
-    <img src="https://via.placeholder.com/300x300" alt="Placeholder Image">
-  </div>
+<div class="horizontal-scroll">
+  <section id="section1">...</section>
+  <section id="section2">...</section>
+  <section id="section3">...</section>
+  <section id="section4">...</section>
+  <section id="section5">...</section>
 </div>
 
-<script src="script.js"></script> <!-- External JavaScript file -->
-
+<script src="script.js"></script>
 </body>
 </html>
