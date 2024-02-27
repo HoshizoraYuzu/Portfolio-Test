@@ -33,16 +33,16 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  width: 100%; /* Full width */
   background-color: #333;
   padding: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between; /* Adjusted for horizontal layout */
+  align-items: center; /* Center items vertically */
   z-index: 1000;
 }
 
-.navbar a {
+.navbar a, #navToggle {
   color: #fff;
   text-decoration: none;
   padding: 10px;
@@ -50,44 +50,13 @@ body {
   font-weight: bold;
 }
 
-/* Additional styles for Bauhaus style */
-
-.section h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-.section p {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-}
-
-.navbar a:hover {
-  background-color: #555;
-}
-
-.nav-links {
+#navLinks {
   display: none; /* Hide links initially */
 }
 
-/* Style for the toggle button (optional) */
-#navToggle {
-  cursor: pointer;
-  /* Add more styles as needed */
+#navLinks a:hover, #navToggle:hover {
+  background-color: #555;
 }
 
+/* No changes needed for the grid layout styles provided previously */
 
-/* Grid layout styles */
-.section .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust number of columns based on container size */
-  gap: 20px; /* Space between images */
-  padding: 20px; /* Padding around the grid */
-}
-
-.grid img {
-  width: 100%; /* Make images fill their container */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Cover the container without stretching */
-}
